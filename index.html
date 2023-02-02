@@ -10,34 +10,109 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
     integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Hello, world!</title>
+  <title>City Guide</title>
 </head>
 
 <body>
 
-  <div class="jumbotron">
-    <h1 class="display-4">City Guide</h1>
-    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
-      featured content or information.</p>
-  </div>
-  <div class="container">
-    <h2>Currency Exchange</h2>
-    <form id="currency-form">
-      <label for="currency-input">From:</label>
-      <input type="text" id="currency-input">
+  <!-- header part below this line -->
+  <!-- <div class="jumbotron jumbotron-fluid jumbotron-style">
+        <div class="container">
+          <h1 class="display-4">Fluid jumbotron</h1>
+          <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div>
+      </div> -->
+  <header class="container-fluid text-center text-white bg-dark p-3">
+    <h1>City Guide</h1>
+  </header>
+  <!-- header part above this line -->
 
-      <label for="new-currency-input">To:</label>
-      <input type="text" id="new-currency-input">
-      <br>
-      <label for="amount-input">Amount:</label>
-      <input type="text" id="amount-input">
 
-      <label for="new-amount-input">New Amount:</label>
-      <input type="text" id="new-amount-input" value="" readonly>
-      <br>
-      <input id="convert-currency" type="submit" value="Convert Currency">
-    </form>
+
+  <!-- search  bar below this line -->
+  <!-- <div class="input-group">
+        <div class="form-outline">
+          <input type="search" id="form1" class="form-control" />
+          <label class="form-label" for="form1">Search</label>
+        </div>
+        <button type="button" class="btn btn-primary">
+          <i class="fas fa-search"></i>
+        </button>
+      </div> -->
+  <div class="search-bar">
+    <div class="input-group">
+      <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search"
+        aria-describedby="search-addon" />
+      <button type="button" class="btn btn-outline-primary">search</button>
+    </div>
   </div>
+
+  <!-- search bar above this line  -->
+
+  <!-- API section below this line -->
+  <main id="api-section" class="container-fluid pageWrapper">
+    <div class="row row-style">
+      <div class="col-lg-3 col-style">
+        <p>City</p>
+      </div>
+
+      <div class="col-lg-3 col-style">
+        <p>Language</p>
+      </div>
+
+      <div class="container">
+        <h2>Currency Exchange</h2>
+        <form id="currency-form">
+          <label for="currency-input">From:</label>
+          <input type="text" id="currency-input">
+
+          <label for="new-currency-input">To:</label>
+          <input type="text" id="new-currency-input">
+          <br>
+          <label for="amount-input">Amount:</label>
+          <input type="text" id="amount-input">
+
+          <label for="new-amount-input">New Amount:</label>
+          <input type="text" id="new-amount-input" value="" readonly>
+          <br>
+          <input id="convert-currency" type="submit" value="Convert Currency">
+        </form>
+      </div>
+
+      <div class="col-lg-3 col-style">
+        <p>Weather</p>
+      </div>
+
+    </div>
+
+    <div class="row row-style">
+      <div class="col-lg-4 col-style">
+        <p>Photo of the city</p>
+      </div>
+
+      <div class="col-lg-4 col-style">
+        <p>Info about the city</p>
+      </div>
+
+      <div class="col-lg-4 col-style">
+        <p>Public holidays</p>
+      </div>
+
+    </div>
+
+
+
+  </main>
+
+
+
+  <!-- API section above this line -->
+
+  <!-- footer section below this line-->
+  <footer class="text-center p-3 fixed-bottom footer">
+    <p>Made with love by Olga, Nicky & Pawel</p>
+  </footer>
+  <!--footer section above this line  -->
 
   <!-- Moment.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>

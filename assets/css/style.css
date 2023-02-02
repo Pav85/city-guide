@@ -1,0 +1,31 @@
+.jumbotron-style {
+    max-height: 20px;
+}
+
+.search-bar {
+    padding: 50px;
+    /* background-color: yellow; */
+    border-bottom: 1px solid black;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+.row-style {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 225px;
+    border: 1px solid black;
+}
+
+.col-style {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    border-top: 1px solid black;
+}
