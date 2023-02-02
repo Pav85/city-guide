@@ -1,4 +1,4 @@
-var container = $('.container');
+var container = $('#currency-container');
 var currentCurrency = [];
 var desireCurrency = [];
 var amount = [];
