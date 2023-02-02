@@ -21,10 +21,11 @@ function makeCall() {
       $.ajax({
         async: true,
         crossDomain: true,
-        url: `https://en.wikipedia.org/w/rest.php/v1/page/London/html`,
+        url: `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&format=json&exintro=&titles=London&origin=*`,
         method: "GET",
-      }).done(function (res2) {
-        console.log("From wikimedia idQ84", res2);
+      }).done(function (res3) {
+        const pageId = Object.keys(res3.query.pages);
+        $("#art").append(res3.query.pages[pageId].extract);
       });
     });
   });
