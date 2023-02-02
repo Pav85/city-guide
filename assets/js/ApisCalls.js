@@ -1,4 +1,4 @@
-function makeCall() {
+function makeCalls() {
   $.ajax({
     async: true,
     crossDomain: true,
@@ -25,11 +25,10 @@ function makeCall() {
         method: "GET",
       }).done(function (res3) {
         const pageId = Object.keys(res3.query.pages);
-        $("#art").append(res3.query.pages[pageId].extract);
+        $("#info").append(res3.query.pages[pageId].extract);
       });
     });
   });
 }
 
-const button = $("<button>").text("renderResponses").click(makeCall);
-$(".container").append(button);
+const button = $("#search").click(makeCalls);
