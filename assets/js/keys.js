@@ -1,2 +1,1 @@
-var omdbApiKey = "3k45j4k623j6k14";
-var openWeatherApiKey = "9E92A9EV239V29V82V2";
+var rapidApiKey = "75e28a11f8msh343986b26cf62b3p1a61abjsnddb44a8db8c9";
