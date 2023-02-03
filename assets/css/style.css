@@ -27,13 +27,17 @@ p {
 }
 
 /* Currency API start */
+.card {
+    background-color: rgb(172, 167, 167);
+}
 
-/* .card-title {
+.card-title {
     text-align: center;
-} */
+}
 
 .inputBox {
     width: 25%;
+    margin-bottom: 10px;
 }
 
 #amount-input {
@@ -46,6 +50,7 @@ p {
 
 .card-link {
     margin: 10px;
+    width: 95%;
 }
 
 /* Currency API ends */
