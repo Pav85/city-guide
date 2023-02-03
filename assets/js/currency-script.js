@@ -28,23 +28,22 @@ convertCurrency.on("click", function (event) {
     console.log(amountToDisplay);
 
     // currency convert URL
-    var queryURL = "https://currency-converter-by-api-ninjas.p.rapidapi.com/v1/convertcurrency?have=" + currentCurrency + "&want=" + desireCurrency + "&amount=" + amount;
+    var queryURL = "https://api.apilayer.com/fixer/convert?to=" + desireCurrency + "&from=" + currentCurrency + "&amount=" + amount;
+
     console.log(queryURL);
     // Ajax function
     $.ajax({
-        async: true,
-        crossDomain: true,
         url: queryURL,
         method: "GET",
+        redirect: "follow",
         headers: {
-            "X-RapidAPI-Key": rapidApiKey,
-            "X-RapidAPI-Host": "currency-converter-by-api-ninjas.p.rapidapi.com"
+            apikey: apiKey,
         }
     }).then(function (response) {
         console.log(response);
 
         // Will display the new amount on a readonly input
-        var amountToDisplay = response.new_amount;
+        var amountToDisplay = response.result;
         console.log(amountToDisplay);
 
         // Set the value the response of ajax
@@ -54,3 +53,4 @@ convertCurrency.on("click", function (event) {
     });
 
 })
+

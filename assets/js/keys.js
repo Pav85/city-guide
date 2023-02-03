@@ -1,1 +1,1 @@
-var rapidApiKey = "75e28a11f8msh343986b26cf62b3p1a61abjsnddb44a8db8c9";
+var apiKey = "jykXqNRW0Y62n8S6SXW4C5ctkG3caX7l";

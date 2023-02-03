@@ -26,6 +26,30 @@ p {
     justify-content: center;
 }
 
+/* Currency API start */
+
+/* .card-title {
+    text-align: center;
+} */
+
+.inputBox {
+    width: 25%;
+}
+
+#amount-input {
+    width: 35%;
+}
+
+#new-amount-input {
+    width: 35%;
+}
+
+.card-link {
+    margin: 10px;
+}
+
+/* Currency API ends */
+
 .footer {
     border-top: 1px solid black;
 }
