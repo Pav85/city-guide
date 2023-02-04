@@ -31,4 +31,5 @@ function makeCalls() {
   });
 }
 
-const button = $("#search").click(makeCalls, cityWeather, publicHolidays); // I added function here - Pawel
+// const button = $("#search").click(makeCalls, cityWeather, publicHolidays); // I added function here - Pawel
+const button = $("#search").click(makeCalls, weatherAndPublicHolidays); // I added function here)

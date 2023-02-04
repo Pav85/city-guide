@@ -1,4 +1,10 @@
+function weatherAndPublicHolidays() {
+  cityWeather();
+  publicHolidays();
+}
+
 function cityWeather() {
+  console.log("hello world!");
   var city = $("#city-input").val();
   var queryURL =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -25,7 +31,7 @@ function cityWeather() {
     );
 
     var countryCode = response.city.country;
-    console.log(countryCode);
+    console.log("This the country code: " + countryCode);
 
     var iconCode = response.list[0].weather[0].icon;
     var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
@@ -49,16 +55,50 @@ function publicHolidays() {
     city +
     "&appid=" +
     APIkey;
-
   $.ajax({
     url: queryURL,
     method: "GET",
-  }).then(function (answer) {
-    console.log(answer);
-
+  }).then(function (response) {
+    console.log(response);
     var countryCode = response.city.country;
-    console.log(countryCode);
+    console.log("Public holiday: " + countryCode);
+
+    var year = moment().format("YYYY");
+
+    var settings = {
+      async: true,
+      crossDomain: true,
+      //   url: "https://public-holiday.p.rapidapi.com/2019/US",
+      url: "https://public-holiday.p.rapidapi.com/" + year + "/" + countryCode,
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": "60da9e0779msh9ab89e49522ec4cp1a7516jsnda11e8862453",
+        "X-RapidAPI-Host": "public-holiday.p.rapidapi.com",
+      },
+    };
+
+    $.ajax(settings).done(function (response) {
+      console.log(response);
+
+      for (var i = 0; i < response.length; i++) {
+        var holidayDate = response[i].date;
+        var holidayName = response[i].name;
+        console.log(holidayDate.replace("2023-", "") + " " + holidayName);
+
+        var p = $("<p>");
+        var publicHolidays = p.text(
+          holidayDate.replace("2023-", "") + " " + holidayName
+        );
+        // var publicHolidays = $("<p>").text(
+        //   holidayDate.replace("2023-", "") + " " + holidayName
+        // );
+        var holidayCard = $("#public-holidays-card");
+        holidayCard.empty();
+        holidayCard.append(publicHolidays);
+      }
+      //   var holidayCard = $("#public-holidays-card");
+      //   holidayCard.empty();
+      //   holidayCard.append(publicHolidays);
+    });
   });
 }
-
-// publicHolidays();
