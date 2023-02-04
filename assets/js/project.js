@@ -24,6 +24,9 @@ function cityWeather() {
       "Humidity: " + response.list[0].main.humidity + "%"
     );
 
+    var countryCode = response.city.country;
+    console.log(countryCode);
+
     var iconCode = response.list[0].weather[0].icon;
     var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
     $("<h2>").attr("src", iconURL);
@@ -37,3 +40,25 @@ function cityWeather() {
     weatherCard.append(cityName, cityTemp, cityWind, cityHumidity);
   });
 }
+
+function publicHolidays() {
+  console.log("public holidays");
+  var city = $("#city-input").val();
+  var queryURL =
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
+    city +
+    "&appid=" +
+    APIkey;
+
+  $.ajax({
+    url: queryURL,
+    method: "GET",
+  }).then(function (answer) {
+    console.log(answer);
+
+    var countryCode = response.city.country;
+    console.log(countryCode);
+  });
+}
+
+// publicHolidays();
