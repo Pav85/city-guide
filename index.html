@@ -34,7 +34,8 @@
       </div> -->
     <div class="search-bar">
       <div class="input-group">
-        <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+        <!-- I added city-input id below - pawel -->
+        <input id="city-input" type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
         <button type="button" class="btn btn-outline-primary" id="search">search</button>
       </div>
     </div>
@@ -57,9 +58,10 @@
 
           <div class="col-lg-2">
             <!-- <p>Weather</p> -->
-            <div class="card" style="width: 18rem;">
+            <!-- I added id below - pawel -->
+            <div id="weather-card" class="card" style="width: 18rem;">
               <!-- <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap"> -->
-              <div class="card-body">
+              <div id="card-body" class="card-body"> <!-- I added id in this line -->
                 <!-- <p class="card-text">Weather</p> -->
               </div>
             </div>
