@@ -23,14 +23,9 @@ convertCurrency.on("click", function (event) {
     desireCurrency.push(newCurrency);
     amount.push(amountToDisplay);
 
-    console.log(currentCurrency);
-    console.log(newCurrency);
-    console.log(amountToDisplay);
-
     // currency convert URL
     var queryURL = "https://api.apilayer.com/fixer/convert?to=" + desireCurrency + "&from=" + currentCurrency + "&amount=" + amount;
 
-    console.log(queryURL);
     // Ajax function
     $.ajax({
         url: queryURL,
@@ -40,14 +35,12 @@ convertCurrency.on("click", function (event) {
             apikey: currencyApiKey,
         }
     }).then(function (response) {
-        console.log(response);
 
         // Will display the new amount on a readonly input
         var amountToDisplay = response.result;
-        console.log(amountToDisplay);
 
         // Set the value the response of ajax
-        newAmount.attr('value', amountToDisplay);
+        newAmount.attr('value', amountToDisplay.toFixed(2));
 
 
     });
