@@ -27,4 +27,4 @@ async function makeCalls() {
   $("#lang").append(flagOfCountry, languageOfCountry, currencyOfCountry);
 }
 
-const button = $("#search").click(makeCalls);
+const button = $("#search").click(makeCalls, cityWeather);
