@@ -28,7 +28,7 @@ function renderCountryCardAndCurrency(resCountryApi) {
   // currency
   const currencyKey = Object.keys(resCountryApi[0].currencies)[0];
   const pWithCurrency = $("<p>").text(`Currency: ${currencyKey}`);
-  $("#currency-input").val(currencyKey);
+  $("#new-currency-input").val(currencyKey);
 
   $("#lang").empty();
   $("#lang").append(pWithName, pWithFlag, pWithLng, pWithCurrency);
