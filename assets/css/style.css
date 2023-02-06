@@ -1,0 +1,43 @@
+.search-bar {
+  padding: 50px;
+  /* background-color: yellow; */
+  border-bottom: 1px solid black;
+}
+
+.col-style {
+  display: flex;
+  justify-content: center;
+}
+
+/* Currency API start */
+.card {
+  background-color: rgb(172, 167, 167);
+}
+
+.card-title {
+  text-align: center;
+}
+
+.inputBox {
+  width: 25%;
+  margin-bottom: 10px;
+}
+
+#amount-input {
+  width: 35%;
+}
+
+#new-amount-input {
+  width: 35%;
+}
+
+.card-link {
+  margin: 10px;
+  width: 95%;
+}
+
+/* Currency API ends */
+
+.footer {
+  border-top: 1px solid black;
+}
