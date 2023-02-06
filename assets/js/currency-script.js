@@ -37,7 +37,7 @@ convertCurrency.on("click", function (event) {
         method: "GET",
         redirect: "follow",
         headers: {
-            apikey: apiKey,
+            apikey: currencyApiKey,
         }
     }).then(function (response) {
         console.log(response);
