@@ -86,19 +86,22 @@ function publicHolidays() {
         console.log(holidayDate.replace("2023-", "") + " " + holidayName);
 
         var p = $("<p>");
-        var publicHolidays = p.text(
-          holidayDate.replace("2023-", "") + " " + holidayName
-        );
-        // var publicHolidays = $("<p>").text(
-        //   holidayDate.replace("2023-", "") + " " + holidayName
-        // );
+
+        var holidaysList = holidayDate.replace("2023-", "") + " " + holidayName;
+        console.log(holidaysList);
+
         var holidayCard = $("#public-holidays-card");
         holidayCard.empty();
-        holidayCard.append(publicHolidays);
+
+        for (var j = 0; j <= holidayName.length; j++) {
+          holidayCard.append(
+            response[j].date.replace("2023-", "") +
+              " " +
+              response[j].name +
+              "<br>"
+          );
+        }
       }
-      //   var holidayCard = $("#public-holidays-card");
-      //   holidayCard.empty();
-      //   holidayCard.append(publicHolidays);
     });
   });
 }
