@@ -47,10 +47,6 @@ p {
     justify-content: center;
 }
 
-.line-divider {
-    border: 1px solid blue;
-}
-
 /* Card start */
 .card {
     background-color: rgb(204, 200, 200);
