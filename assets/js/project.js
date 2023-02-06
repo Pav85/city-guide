@@ -2,9 +2,9 @@ function weatherAndPublicHolidays() {
   cityWeather();
   publicHolidays();
 }
+// weather card
 
 function cityWeather() {
-  console.log("hello world!");
   var city = $("#city-input").val();
   var queryURL =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -17,8 +17,6 @@ function cityWeather() {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
-
     var cityName = $("<h2>").text(moment().format("MM/DD/YYYY"));
     var cityTemp = $("<p>").text(
       "Temp: " + response.list[0].main.temp.toFixed(0) + " °C"
@@ -29,9 +27,6 @@ function cityWeather() {
     var cityHumidity = $("<p>").text(
       "Humidity: " + response.list[0].main.humidity + "%"
     );
-
-    var countryCode = response.city.country;
-    console.log("This the country code: " + countryCode);
 
     var iconCode = response.list[0].weather[0].icon;
     var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
@@ -48,7 +43,6 @@ function cityWeather() {
 }
 
 function publicHolidays() {
-  console.log("public holidays");
   var city = $("#city-input").val();
   var queryURL =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
@@ -59,16 +53,13 @@ function publicHolidays() {
     url: queryURL,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
     var countryCode = response.city.country;
-    console.log("Public holiday: " + countryCode);
 
     var year = moment().format("YYYY");
 
     var settings = {
       async: true,
       crossDomain: true,
-      //   url: "https://public-holiday.p.rapidapi.com/2019/US",
       url: "https://public-holiday.p.rapidapi.com/" + year + "/" + countryCode,
       method: "GET",
       headers: {
@@ -78,22 +69,13 @@ function publicHolidays() {
     };
 
     $.ajax(settings).done(function (response) {
-      console.log(response);
-
       for (var i = 0; i < response.length; i++) {
         var holidayDate = response[i].date;
-        var holidayName = response[i].name;
-        console.log(holidayDate.replace("2023-", "") + " " + holidayName);
-
-        var p = $("<p>");
-
-        var holidaysList = holidayDate.replace("2023-", "") + " " + holidayName;
-        console.log(holidaysList);
 
         var holidayCard = $("#public-holidays-card");
         holidayCard.empty();
 
-        for (var j = 0; j <= holidayName.length; j++) {
+        for (var j = 0; j <= holidayDate.length; j++) {
           holidayCard.append(
             response[j].date.replace("2023-", "") +
               " " +
