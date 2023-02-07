@@ -3,6 +3,10 @@ h2 {
   text-align: center;
 }
 
+#page-container {
+  min-height: 100vh;
+}
+
 /* Header start */
 .jumbotron {
   background-image: url("../images/header-image.jpg");
@@ -107,8 +111,9 @@ footer {
   font-size: 18px;
   font-weight: 300;
   padding-top: 12px;
+  margin: 0;
   width: 100%;
-  /* position: static; */
   position: fixed;
   bottom: 0;
+  border-top: 1px solid blue;
 }
