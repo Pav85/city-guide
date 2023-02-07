@@ -27,7 +27,7 @@
   <body id="page-container">
     <!-- header part below this line -->
     <header>
-      <div class="jumbotron jumbotron-fluid text-center">
+      <div class="jumbotron jumbotron-fluid text-center jumbotron-main">
         <div class="container-header">
           <h1 class="display-4">City Guide</h1>
 
@@ -54,19 +54,19 @@
     <!-- header part above this line -->
 
     <!-- API section below this line -->
-    <section id="api-section" class="container-fluid pageWrapper">
+    <section id="api-section" class="container-fluid pageWrapper hide">
       <h2 id="city"></h2>
 
-      <div class="row">
-        <div class="card" style="width: 18rem">
+      <div class="row row-style">
+        <div class="card" style="width: 21rem">
           <div class="card-body text-center">
-            <h5 class="card-title">Language</h5>
+            <h5 class="card-title">Info:</h5>
             <div id="lang"></div>
           </div>
         </div>
 
         <!-- Currency API start -->
-        <div class="card" style="width: 18rem">
+        <div class="card" style="width: 21rem">
           <div class="card-body text-center">
             <h5 class="card-title">Currency Converter</h5>
             <div class="currency-container">
@@ -101,14 +101,14 @@
         </div>
         <!-- Currency API end -->
 
-        <div id="weather-card" class="card" style="width: 18rem">
+        <div id="weather-card" class="card" style="width: 21rem">
           <div id="card-body" class="card-body text-center">
             <h5 class="card-title">Weather</h5>
             <div></div>
           </div>
         </div>
 
-        <div class="card" style="width: 18rem">
+        <div class="card" style="width: 21rem">
           <div class="card-body text-center">
             <h5 class="card-title">Public holidays</h5>
             <div class="col-lg-3"></div>
@@ -120,11 +120,12 @@
     </section>
 
     <!-- API section above this line -->
-    <footer>
+    <footer class="footer-main">
       <div class="footer-container">
         <p>Made with &#10084;&#65039 by Olga, Nicky & Pawel</p>
       </div>
     </footer>
+
     <!--footer section above this line  -->
 
     <!-- Moment.js, jQuery -->
