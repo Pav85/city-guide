@@ -16,10 +16,14 @@ async function getGeoAndRenderGeoData() {
     resGeoApi.data[0].countryCode
   );
   const resWeatherApi = await weatherApi.getForecast(cityName);
+  const resPublicHolidayApi = await publicHolidayApi.getPublicHoliday(
+    resGeoApi.data[0].countryCode
+  );
 
   renderCountryCardAndCurrency(resCountryApi);
   renderCountryArticle(resWikiApi);
   renderWeatherCard(cityName, resWeatherApi);
+  randerHolidayCard(resPublicHolidayApi);
 }
 
 function renderCountryCardAndCurrency(resCountryApi) {
@@ -73,4 +77,13 @@ function renderWeatherCard(headerCity, resWeatherApi) {
     pCityWind,
     pCityHumidity
   );
+}
+
+function randerHolidayCard(resPublicHolidayApi) {
+  const holidays = $("#holidays");
+  for (let i = 0; i < resPublicHolidayApi.length; i++) {
+    const element = resPublicHolidayApi[i];
+    const liHoliday = $("<li>").text(`${element.date} - ${element.name}`);
+    holidays.append(liHoliday);
+  }
 }
