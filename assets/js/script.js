@@ -3,6 +3,13 @@ const button = $("#search").click(getGeoAndRenderGeoData);
 async function getGeoAndRenderGeoData() {
   const cityName = $("#searchInput").val();
 
+  const showCards = $("#api-section"); // show cards section
+  const showFooter = $(".footer-main"); // show footer section
+  const showLargeJumbotron = $(".jumbotron-main"); // show large jumbotron section
+  showCards.removeClass("hide"); // show cards section
+  showFooter.removeClass("footer-main"); // show footer section
+  showLargeJumbotron.removeClass("jumbotron-main"); // show large jumbotron section
+
   const resGeoApi = await geoApi.getCity(cityName);
   const resWikiApi = await wikipediaApi.getArticle(cityName);
   const resCountryApi = await restCountriesApi.getCountry(

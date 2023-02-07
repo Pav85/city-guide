@@ -41,6 +41,10 @@ body {
   z-index: 10;
 }
 
+.jumbotron-main {
+  height: 80vh;
+}
+
 .container-header {
   background-color: rgba(0, 0, 0, 0.5);
   /* background-color: var(--repeatedColor3); */
@@ -49,6 +53,8 @@ body {
 .display-4 {
   color: white;
   font-weight: 300;
+  padding-top: 2%;
+  font-size: 72px;
 }
 
 .search-bar {
@@ -141,8 +147,20 @@ footer {
   padding-top: 20px;
   margin: 0px;
   width: 100%;
-  position: relative;
+  /* position: relative; */
+  /* position: fixed; */
   bottom: 0;
   border-top: 1px solid blue;
-  transform: translateY(48%);
+  /* border-bottom: 1px solid blue; */
+  transform: translateY(20%);
+}
+
+.footer-main {
+  position: relative;
+  padding-bottom: 2px;
+  transform: translateY(78%) !important;
+}
+
+.hide {
+  display: none;
 }
