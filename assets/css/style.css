@@ -1,3 +1,10 @@
+:root {
+  --repeatedColor1: #ffc09f;
+  --repeatedColor2: #ffee93;
+  --repeatedColor3: #fcf5c7;
+  --repeatedColor4: #a0ced9;
+}
+
 /* Text */
 h2 {
   text-align: center;
@@ -8,6 +15,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
+  background-color: var(--repeatedColor3); /* might need to be changed */
 }
 
 /* Header start */
@@ -21,6 +29,7 @@ body {
 
 .container-header {
   background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: var(--repeatedColor3); */
 }
 
 .display-4 {
@@ -35,23 +44,25 @@ body {
 }
 
 /* Header ends */
-
+/* might need to change it back */
 .row-style {
   display: flex;
-  /* justify-content: center; */
-  align-items: center;
+  justify-content: center;
+  /* align-items: center; */
   min-height: 225px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  /* padding-top: 20px; */
 }
 
-.col-style {
+/* .col-style {
   display: flex;
   justify-content: center;
-}
+} */
 
 /* Card start */
 .card {
-  background-color: rgb(204, 200, 200);
+  /* background-color: rgb(204, 200, 200); */
+  background-color: var(--repeatedColor1);
   margin: 15px;
   border-color: blue;
 }
@@ -93,7 +104,8 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background-color: navajowhite;
+  /* background-color: navajowhite; */
+  background-color: var(--repeatedColor1);
   font-size: 18px;
   font-weight: 300;
   padding-top: 12px;
