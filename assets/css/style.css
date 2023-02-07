@@ -39,6 +39,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 10;
+  min-height: 55vh;
 }
 
 .jumbotron-main {
@@ -62,6 +63,7 @@ body {
   margin-right: 20%;
   margin-top: 5%;
   padding: 15px;
+  padding-bottom: 50px;
 }
 
 /* Header ends */
@@ -103,7 +105,7 @@ body {
   opacity: 0.9;
   margin-left: 10%;
   margin-right: 10%;
-  padding: 10px;
+  padding: 5px;
   font-size: 18px;
   /* font-family: "Courier New", Courier, monospace; */
   font-weight: 500;
