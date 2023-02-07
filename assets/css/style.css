@@ -1,8 +1,15 @@
-:root {
+/* :root {
   --repeatedColor1: #ffc09f;
   --repeatedColor2: #ffee93;
   --repeatedColor3: #fcf5c7;
   --repeatedColor4: #a0ced9;
+} */
+
+:root {
+  --repeatedColor1: #ffcab1;
+  --repeatedColor2: #ecdcb0;
+  --repeatedColor3: #c1d7ae;
+  --repeatedColor4: #8cc084;
 }
 
 /* Text */
@@ -15,7 +22,7 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-color: var(--repeatedColor3); /* might need to be changed */
+  background-color: var(--repeatedColor2); /* might need to be changed */
 }
 
 /* Header start */
@@ -64,7 +71,11 @@ body {
   /* background-color: rgb(204, 200, 200); */
   background-color: var(--repeatedColor1);
   margin: 15px;
-  border-color: blue;
+  /* border-color: blue; */
+  /* border-color: var(--repeatedColor4); */
+  -webkit-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
 }
 
 .card-title {
@@ -73,7 +84,9 @@ body {
 
 .card p {
   /* color: white; */
-  background-color: rgba(70, 97, 234, 0.675);
+  /* background-color: rgba(70, 97, 234, 0.675); */
+  background-color: var(--repeatedColor4);
+  opacity: 0.9;
 }
 
 /* Card end */
@@ -105,9 +118,9 @@ footer {
   justify-content: space-evenly;
   align-items: center;
   /* background-color: navajowhite; */
-  background-color: var(--repeatedColor1);
+  background-color: var(--repeatedColor4);
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
   padding-top: 12px;
   margin: 0px;
   width: 100%;
