@@ -17,6 +17,13 @@ h2 {
   text-align: center;
 }
 
+h5 {
+  /* font-family: "Courier New", Courier, monospace; */
+  /* font-weight: 500; */
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -41,6 +48,7 @@ body {
 
 .display-4 {
   color: white;
+  font-weight: 300;
 }
 
 .search-bar {
@@ -73,8 +81,8 @@ body {
   margin: 15px;
   /* border-color: blue; */
   /* border-color: var(--repeatedColor4); */
-  -webkit-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
+  /* -webkit-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
+  /* -moz-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
   box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
 }
 
@@ -87,6 +95,15 @@ body {
   /* background-color: rgba(70, 97, 234, 0.675); */
   background-color: var(--repeatedColor4);
   opacity: 0.9;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 10px;
+  font-size: 18px;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-weight: 500;
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: cursive;
 }
 
 /* Card end */
@@ -121,7 +138,7 @@ footer {
   background-color: var(--repeatedColor4);
   font-size: 18px;
   font-weight: 400;
-  padding-top: 12px;
+  padding-top: 20px;
   margin: 0px;
   width: 100%;
   position: relative;
