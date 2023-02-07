@@ -34,23 +34,17 @@ p {
 
 /* Header ends */
 
-.row-style {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    min-height: 225px;
-    border: 1px solid black;
-}
-
-.col-style {
+.row {
     display: flex;
     justify-content: center;
+
 }
+
 
 /* Card start */
 .card {
     background-color: rgb(204, 200, 200);
-    margin: 15px;
+    margin: 55px;
     border-color: blue;
 }
 
