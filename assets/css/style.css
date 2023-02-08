@@ -1,10 +1,3 @@
-/* :root {
-  --repeatedColor1: #ffc09f;
-  --repeatedColor2: #ffee93;
-  --repeatedColor3: #fcf5c7;
-  --repeatedColor4: #a0ced9;
-} */
-
 :root {
   --repeatedColor1: #ffcab1;
   --repeatedColor2: #ecdcb0;
@@ -18,8 +11,6 @@ h2 {
 }
 
 h5 {
-  /* font-family: "Courier New", Courier, monospace; */
-  /* font-weight: 500; */
   font-size: 24px;
   color: rgba(0, 0, 0, 0.75);
 }
@@ -30,7 +21,6 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: var(--repeatedColor2);
-  /* might need to be changed */
 }
 
 /* Header start */
@@ -49,7 +39,6 @@ body {
 
 .container-header {
   background-color: rgba(0, 0, 0, 0.5);
-  /* background-color: var(--repeatedColor3); */
 }
 
 .display-4 {
@@ -57,8 +46,6 @@ body {
   font-weight: 300;
   padding-top: 2%;
   font-size: 72px;
-  /* text-shadow: 3px 2px 2px rgba(206, 89, 55, 0.8); */
-  /* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 2px 2px 2px rgba(206,89,55,0); */
   text-shadow: 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18,
     2px 2px 2px rgba(206, 89, 55, 0);
 }
@@ -96,26 +83,13 @@ h3 {
 .row-style {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   min-height: 225px;
-  /* border: 1px solid black; */
-  /* padding-top: 20px; */
 }
-
-/* .col-style {
-  display: flex;
-  justify-content: center;
-} */
 
 /* Card start */
 .card {
-  /* background-color: rgb(204, 200, 200); */
   background-color: var(--repeatedColor1);
   margin: 15px;
-  /* border-color: blue; */
-  /* border-color: var(--repeatedColor4); */
-  /* -webkit-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
-  /* -moz-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
   box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
 }
 
@@ -124,18 +98,13 @@ h3 {
 }
 
 .card p {
-  /* color: white; */
-  /* background-color: rgba(70, 97, 234, 0.675); */
   background-color: var(--repeatedColor4);
   opacity: 0.9;
   margin-left: 10%;
   margin-right: 10%;
   padding: 5px;
   font-size: 18px;
-  /* font-family: "Courier New", Courier, monospace; */
   font-weight: 500;
-  /* font-family: Georgia, "Times New Roman", Times, serif; */
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
   font-family: cursive;
 }
 
@@ -167,18 +136,14 @@ footer {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  /* background-color: navajowhite; */
   background-color: var(--repeatedColor4);
   font-size: 18px;
   font-weight: 400;
   padding-top: 20px;
   margin: 0px;
   width: 100%;
-  /* position: relative; */
-  /* position: fixed; */
   bottom: 0;
   border-top: 1px solid blue;
-  /* border-bottom: 1px solid blue; */
   transform: translateY(20%);
 }
 
