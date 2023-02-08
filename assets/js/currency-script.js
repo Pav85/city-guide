@@ -48,3 +48,10 @@ convertCurrency.on("click", function (event) {
     newAmount.attr("value", amountToDisplay.toFixed(2));
   });
 });
+
+$('#search').on('click', function () {
+  $('#currency-input').val("");
+  $("#amount-input").val("")
+  $("#new-currency-input").val("");
+  newAmount.attr("value", "");
+})
