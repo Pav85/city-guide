@@ -71,3 +71,11 @@ Public Holiday API: https://rapidapi.com/theapiguy/api/public-holiday/
 ## License
 
 N/A
+
+## Skills
+
+[![My Skills](https://skills.thijs.gg/icons?i=html&theme=dark)](https://en.wikipedia.org/wiki/HTML)
+[![My Skills](https://skills.thijs.gg/icons?i=css&theme=dark)](https://en.wikipedia.org/wiki/CSS)
+[![My Skills](https://skills.thijs.gg/icons?i=javascript&theme=dark)](https://en.wikipedia.org/wiki/JavaScript)
+[![My Skills](https://skills.thijs.gg/icons?i=jquery&theme=dark)](https://jquery.com/)
+[![My Skills](https://skills.thijs.gg/icons?i=bootstrap&theme=dark)](https://getbootstrap.com/)
