@@ -1,108 +1,172 @@
-/* Text */
-h2 {
-    text-align: center;
+/* :root {
+  --repeatedColor1: #ffc09f;
+  --repeatedColor2: #ffee93;
+  --repeatedColor3: #fcf5c7;
+  --repeatedColor4: #a0ced9;
+} */
+
+:root {
+  --repeatedColor1: #ffcab1;
+  --repeatedColor2: #ecdcb0;
+  --repeatedColor3: #c1d7ae;
+  --repeatedColor4: #8cc084;
 }
 
-p {
-    display: flex;
-    justify-content: center;
+/* Text */
+h2 {
+  text-align: center;
+}
+
+h5 {
+  /* font-family: "Courier New", Courier, monospace; */
+  /* font-weight: 500; */
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--repeatedColor2); /* might need to be changed */
 }
 
 /* Header start */
 .jumbotron {
-    background-image: url("../images/header-image.jpg");
-    background-color: rgba(0, 0, 0, 0.7);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 10;
+  background-image: url("../images/header-image.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 10;
+  min-height: 55vh;
+}
+
+.jumbotron-main {
+  height: 80vh;
 }
 
 .container-header {
-    background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  /* background-color: var(--repeatedColor3); */
 }
 
 .display-4 {
-    color: white;
+  color: white;
+  font-weight: 300;
+  padding-top: 2%;
+  font-size: 72px;
+  /* text-shadow: 3px 2px 2px rgba(206, 89, 55, 0.8); */
+  /* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 2px 2px 2px rgba(206,89,55,0); */
+  text-shadow: 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18,
+    2px 2px 2px rgba(206, 89, 55, 0);
 }
 
 .search-bar {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 5%;
-    padding: 15px;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 5%;
+  padding: 15px;
+  padding-bottom: 50px;
 }
 
 /* Header ends */
-
+/* might need to change it back */
 .row-style {
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    min-height: 225px;
-    border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  min-height: 225px;
+  /* border: 1px solid black; */
+  /* padding-top: 20px; */
 }
 
-.col-style {
-    display: flex;
-    justify-content: center;
-}
+/* .col-style {
+  display: flex;
+  justify-content: center;
+} */
 
 /* Card start */
 .card {
-    background-color: rgb(204, 200, 200);
-    margin: 15px;
-    border-color: blue;
+  /* background-color: rgb(204, 200, 200); */
+  background-color: var(--repeatedColor1);
+  margin: 15px;
+  /* border-color: blue; */
+  /* border-color: var(--repeatedColor4); */
+  /* -webkit-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
+  /* -moz-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
+  box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
 }
 
 .card-title {
-    text-align: center;
+  text-align: center;
 }
 
 .card p {
-    /* color: white; */
-    background-color: rgba(70, 97, 234, 0.675);
+  /* color: white; */
+  /* background-color: rgba(70, 97, 234, 0.675); */
+  background-color: var(--repeatedColor4);
+  opacity: 0.9;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 5px;
+  font-size: 18px;
+  /* font-family: "Courier New", Courier, monospace; */
+  font-weight: 500;
+  /* font-family: Georgia, "Times New Roman", Times, serif; */
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: cursive;
 }
 
 /* Card end */
 
-
 /* Currency API start */
 .inputBox {
-    width: 25%;
-    margin-bottom: 10px;
+  width: 25%;
+  margin-bottom: 10px;
 }
 
 #amount-input {
-    width: 35%;
+  width: 35%;
 }
 
 #new-amount-input {
-    width: 35%;
+  width: 35%;
 }
 
 .card-link {
-    margin: 10px;
-    width: 95%;
-
+  margin: 10px;
+  width: 95%;
 }
 
 /* Currency API ends */
 
-
-/* .footer {
-    border-top: 1px solid black;
-    background-color: aquamarine;
-} */
-
+/* Footer section */
 footer {
-    padding: 25px 0;
-    margin-top: 50px;
-    width: 100%;
-    bottom: 0;
-    background-color: rgb(172, 167, 167);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* background-color: navajowhite; */
+  background-color: var(--repeatedColor4);
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 20px;
+  margin: 0px;
+  width: 100%;
+  /* position: relative; */
+  /* position: fixed; */
+  bottom: 0;
+  border-top: 1px solid blue;
+  /* border-bottom: 1px solid blue; */
+  transform: translateY(20%);
 }
 
-footer p {
-    font-size: 12;
-    margin: 0;
+.footer-main {
+  position: relative;
+  padding-bottom: 2px;
+  transform: translateY(78%) !important;
+}
+
+.hide {
+  display: none;
 }
