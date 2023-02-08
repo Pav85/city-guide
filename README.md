@@ -1,4 +1,4 @@
-# City-Guide
+# [City-Guide](https://github.com/Pav85/city-guide)
 
 ## Description
 
@@ -41,11 +41,19 @@ After opening this URL: https://pav85.github.io/city-guide/ you should see this:
 
 ## API Reference
 
+##### **Info:**
+
+GeoDB Cities API: https://rapidapi.com/wirefreethought/api/geodb-cities
+
+- flag - Rest Countries API: https://rapidapi.com/wirefreethought/api/geodb-cities
+
 ##### **Currency Converter:**
 
 Fixer APi: https://apilayer.com/marketplace/fixer-api
 
 ##### **Weather:**
+
+Weather API: https://openweathermap.org/api
 
 5 day weather forecast API: https://openweathermap.org/forecast5#name5
 
