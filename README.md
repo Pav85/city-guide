@@ -39,13 +39,22 @@ After opening this URL: https://pav85.github.io/city-guide/ you should see this:
 
 ### GitHub Repository URL: https://github.com/Pav85/city-guide
 
+## Color Reference
+
+| Color         | Hex                                                               |
+| ------------- | ----------------------------------------------------------------- |
+| Example Color | ![##ffcab1](https://via.placeholder.com/10/ffcab1?text=+) #ffcab1 |
+| Example Color | ![#ecdcb0](https://via.placeholder.com/10/ecdcb0?text=+) #ecdcb0  |
+| Example Color | ![#c1d7ae](https://via.placeholder.com/10/c1d7ae?text=+) #c1d7ae  |
+| Example Color | ![#8cc084](https://via.placeholder.com/10/8cc084?text=+) #8cc084  |
+
 ## API Reference
 
 ##### **Info:**
 
 GeoDB Cities API: https://rapidapi.com/wirefreethought/api/geodb-cities
 
-- flag - Rest Countries API: https://rapidapi.com/wirefreethought/api/geodb-cities
+Rest Countries API: https://rapidapi.com/wirefreethought/api/geodb-cities
 
 ##### **Currency Converter:**
 
@@ -61,26 +70,19 @@ Weather API: https://openweathermap.org/api
 
 Public Holiday API: https://rapidapi.com/theapiguy/api/public-holiday/
 
-## Color Reference
-
-| Color         | Hex                                                               |
-| ------------- | ----------------------------------------------------------------- |
-| Example Color | ![##ffcab1](https://via.placeholder.com/10/ffcab1?text=+) #ffcab1 |
-| Example Color | ![#ecdcb0](https://via.placeholder.com/10/ecdcb0?text=+) #ecdcb0  |
-| Example Color | ![#c1d7ae](https://via.placeholder.com/10/c1d7ae?text=+) #c1d7ae  |
-| Example Color | ![#8cc084](https://via.placeholder.com/10/8cc084?text=+) #8cc084  |
-
 ## Authors
 
-- [@OlgaFelczak](https://github.com/OlgaFelczak)
-- [@Pawel](https://github.com/Pav85)
-- [@Alexander](https://github.com/PurAlex)
+## [@OlgaFelczak](https://github.com/OlgaFelczak)
+
+## [@Pawel](https://github.com/Pav85)
+
+## [@Alexander](https://github.com/PurAlex)
 
 ## License
 
 N/A
 
-## Skills
+## Technologies used
 
 [![My Skills](https://skills.thijs.gg/icons?i=html&theme=dark)](https://en.wikipedia.org/wiki/HTML)
 [![My Skills](https://skills.thijs.gg/icons?i=css&theme=dark)](https://en.wikipedia.org/wiki/CSS)
