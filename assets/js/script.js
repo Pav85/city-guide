@@ -1,7 +1,14 @@
 const button = $("#search").click(getGeoAndRenderGeoData);
 
+const cities = [];
+showLocal();
+
 async function getGeoAndRenderGeoData() {
   const cityName = $("#searchInput").val();
+
+  cities.push(cityName);
+
+  addLocal();
 
   const showCards = $("#api-section"); // show cards section
   const showFooter = $(".footer-main"); // show footer section
@@ -73,4 +80,22 @@ function renderWeatherCard(headerCity, resWeatherApi) {
     pCityWind,
     pCityHumidity
   );
+}
+
+function addLocal() {
+  var local = localStorage.setItem("cities", cities);
+  console.log(local);
+}
+
+function showLocal() {
+  var displayLocal = localStorage.getItem('cities');
+  console.log(displayLocal);
+
+  var p = $('<p>');
+  p.addClass("local-p");
+
+  p.text(displayLocal);
+
+  $('#latest-searches').append(p);
+
 }
