@@ -13,9 +13,11 @@ async function getGeoAndRenderGeoData() {
   const showCards = $("#api-section"); // show cards section
   const showFooter = $(".footer-main"); // show footer section
   const showLargeJumbotron = $(".jumbotron-main"); // show large jumbotron section
+  const showLatestSearches = $("#searches"); // show latest searches section
   showCards.removeClass("hide"); // show cards section
   showFooter.removeClass("footer-main"); // show footer section
   showLargeJumbotron.removeClass("jumbotron-main"); // show large jumbotron section
+  showLatestSearches.removeClass("hide-searches"); // show latest searches section
 
   const resGeoApi = await geoApi.getCity(cityName);
   const resWikiApi = await wikipediaApi.getArticle(cityName);
@@ -101,14 +103,13 @@ function addLocal() {
 }
 
 function showLocal() {
-  var displayLocal = localStorage.getItem('cities');
+  var displayLocal = localStorage.getItem("cities");
   console.log(displayLocal);
 
-  var p = $('<p>');
+  var p = $("<p>");
   p.addClass("local-p");
 
   p.text(displayLocal);
 
-  $('#latest-searches').append(p);
-
+  $("#latest-searches").append(p);
 }
