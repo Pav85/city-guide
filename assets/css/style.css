@@ -91,6 +91,8 @@ h3 {
   background-color: var(--repeatedColor1);
   margin: 15px;
   box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
+  max-height: 300px;
+  overflow: auto;
 }
 
 .card-title {
@@ -105,6 +107,12 @@ h3 {
   padding: 5px;
   font-size: 18px;
   font-weight: 500;
+  font-family: cursive;
+}
+
+.card li {
+  opacity: 0.9;
+  font-size: 18px;
   font-family: cursive;
 }
 
@@ -130,6 +138,14 @@ h3 {
 }
 
 /* Currency API ends */
+
+/* Article from Wikipedia start */
+#info p {
+  font-size: 18px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* Article from Wikipedia ends */
 
 /* Footer section */
 footer {
