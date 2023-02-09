@@ -5,7 +5,7 @@ showLocal();
 
 async function getGeoAndRenderGeoData() {
   const cityName = $("#searchInput").val();
-  $('#searchInput').val("");
+  $("#searchInput").val("");
   cities.push(cityName);
 
   addLocal();
@@ -92,7 +92,9 @@ function randerHolidayCard(resPublicHolidayApi) {
   const holidays = $("#holidays");
   for (let i = 0; i < resPublicHolidayApi.length; i++) {
     const element = resPublicHolidayApi[i];
-    const liHoliday = $("<li>").text(`${element.date} - ${element.name}`);
+    const liHoliday = $("<li>")
+      .text(`${element.date.replace("2023-", "")} - ${element.name}`) // remove year from date
+      .css("text-align", "left"); // align holidays list
     holidays.append(liHoliday);
   }
 }
@@ -102,7 +104,7 @@ function addLocal() {
 }
 
 function showLocal() {
-  var displayLocal = localStorage.getItem('cities');
+  var displayLocal = localStorage.getItem("cities");
 
   var p = $("<p>");
   p.addClass("local-p");
