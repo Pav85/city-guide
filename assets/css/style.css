@@ -77,6 +77,10 @@ h3 {
   margin-top: 5px;
 }
 
+.hide-searches {
+  display: none;
+}
+
 /* Local storage - end */
 
 /* might need to change it back */
