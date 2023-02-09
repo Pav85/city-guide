@@ -1,112 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <title>City Guide</title>
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <body id="page-container">
-    <!-- header part below this line -->
-    <header>
-      <div class="jumbotron jumbotron-fluid text-center jumbotron-main">
-        <div class="container-header">
-          <h1 class="display-4">City Guide</h1>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <title>City Guide</title>
+</head>
 
-          <!-- search  bar below this line -->
-          <div class="search-bar">
-            <div class="input-group">
-              <input
-                id="searchInput"
-                type="search"
-                class="form-control rounded"
-                placeholder="Search City"
-                aria-label="Search"
-                aria-describedby="search-addon"
-              />
-              <button id="search" type="button" class="btn btn-outline-primary">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </button>
-            </div>
+<body id="page-container">
+  <!-- header part below this line -->
+  <header>
+    <div class="jumbotron jumbotron-fluid text-center jumbotron-main">
+      <div class="container-header">
+        <h1 class="display-4">City Guide</h1>
+
+        <!-- search  bar below this line -->
+        <div class="search-bar">
+          <div class="input-group">
+            <input id="searchInput" type="search" class="form-control rounded" placeholder="Search City"
+              aria-label="Search" aria-describedby="search-addon" />
+            <button id="search" type="button" class="btn btn-outline-primary">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
           </div>
-          <!-- search bar above this line  -->
+        </div>
+        <!-- search bar above this line  -->
+      </div>
+    </div>
+  </header>
+  <!-- header part above this line -->
+
+  <!-- Store buttons to local storage - start -->
+  <div class="storage-container">
+    <h3>Latest searches:</h3>
+    <div id="latest-searches"></div>
+  </div>
+  <!-- Store buttons to local storage - end -->
+
+  <!-- API section below this line -->
+  <section id="api-section" class="container-fluid pageWrapper hide">
+    <h2 id="city"></h2>
+
+    <div class="row row-style">
+      <div class="card" style="width: 21rem">
+        <div class="card-body text-center">
+          <h5 class="card-title">Info:</h5>
+          <div id="lang"></div>
         </div>
       </div>
-    </header>
-    <!-- header part above this line -->
 
-    <!-- API section below this line -->
-    <section id="api-section" class="container-fluid pageWrapper hide">
-      <h2 id="city"></h2>
+      <!-- Currency API start -->
+      <div class="card" style="width: 21rem">
+        <div class="card-body text-center">
+          <h5 class="card-title">Currency Converter</h5>
+          <div class="currency-container">
+            <form id="currency-form">
+              <label for="currency-input">From:</label>
+              <input class="inputBox" type="text" id="currency-input" />
 
-      <div class="row row-style">
-        <div class="card" style="width: 21rem">
-          <div class="card-body text-center">
-            <h5 class="card-title">Info:</h5>
-            <div id="lang"></div>
+              <label for="new-currency-input">To:</label>
+              <input class="inputBox" type="text" id="new-currency-input" />
+              <br />
+              <label for="amount-input">Amount:</label>
+              <input class="inputBox" type="text" id="amount-input" />
+
+              <label for="new-amount-input">New Amount:</label>
+              <input class="inputBox" type="text" id="new-amount-input" value="" readonly />
+              <br />
+            </form>
           </div>
+          <input class="card-link form-control rounded btn-outline-primary" id="convert-currency" type="submit"
+            value="Convert Currency" />
         </div>
+      </div>
+      <!-- Currency API end -->
 
-        <!-- Currency API start -->
-        <div class="card" style="width: 21rem">
-          <div class="card-body text-center">
-            <h5 class="card-title">Currency Converter</h5>
-            <div class="currency-container">
-              <form id="currency-form">
-                <label for="currency-input">From:</label>
-                <input class="inputBox" type="text" id="currency-input" />
-
-                <label for="new-currency-input">To:</label>
-                <input class="inputBox" type="text" id="new-currency-input" />
-                <br />
-                <label for="amount-input">Amount:</label>
-                <input class="inputBox" type="text" id="amount-input" />
-
-                <label for="new-amount-input">New Amount:</label>
-                <input
-                  class="inputBox"
-                  type="text"
-                  id="new-amount-input"
-                  value=""
-                  readonly
-                />
-                <br />
-              </form>
-            </div>
-            <input
-              class="card-link form-control rounded btn-outline-primary"
-              id="convert-currency"
-              type="submit"
-              value="Convert Currency"
-            />
-          </div>
+      <div id="weather-card" class="card" style="width: 21rem">
+        <div id="card-body" class="card-body text-center">
+          <h5 class="card-title">Weather</h5>
+          <div></div>
         </div>
-        <!-- Currency API end -->
-
-        <div id="weather-card" class="card" style="width: 21rem">
-          <div id="card-body" class="card-body text-center">
-            <h5 class="card-title">Weather</h5>
-            <div></div>
-          </div>
-        </div>
+      </div>
 
         <div class="card" style="width: 21rem">
           <div class="card-body text-center">
@@ -122,20 +104,20 @@
       </div>
     </section>
 
-    <!-- API section above this line -->
-    <footer class="footer-main">
-      <div class="footer-container">
-        <p>Made with &#10084;&#65039 by Olga, Nicky & Pawel</p>
-      </div>
-    </footer>
+  <!-- API section above this line -->
+  <footer class="footer-main">
+    <div class="footer-container">
+      <p>Made with &#10084;&#65039 by Olga, Nicky & Pawel</p>
+    </div>
+  </footer>
 
-    <!--footer section above this line  -->
+  <!--footer section above this line  -->
 
-    <!-- Moment.js, jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Moment.js, jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <script src="./assets/js/keys.js"></script>
+  <script src="./assets/js/keys.js"></script>
 
     <script src="./assets/js/api/weatherApi.js"></script>
     <script src="./assets/js/api/geoApi.js"></script>
@@ -143,7 +125,8 @@
     <script src="./assets/js/api/wikipediaApi.js"></script>
     <script src="./assets/js/api/publicHolidayApi.js"></script>
 
-    <script src="./assets/js/currency-script.js"></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
+  <script src="./assets/js/currency-script.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
 </html>

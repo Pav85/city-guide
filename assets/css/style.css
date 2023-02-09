@@ -29,7 +29,8 @@ body {
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-color: var(--repeatedColor2); /* might need to be changed */
+  background-color: var(--repeatedColor2);
+  /* might need to be changed */
 }
 
 /* Header start */
@@ -71,6 +72,26 @@ body {
 }
 
 /* Header ends */
+
+/* Local storage - start */
+h3 {
+  font-size: 15px;
+  display: inline-block;
+}
+
+.storage-container {
+  display: flex;
+  align-items: center;
+  margin-top: -20px;
+}
+
+.local-p {
+  padding-left: 10px;
+  margin-top: 5px;
+}
+
+/* Local storage - end */
+
 /* might need to change it back */
 .row-style {
   display: flex;

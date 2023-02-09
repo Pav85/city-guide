@@ -1,7 +1,14 @@
 const button = $("#search").click(getGeoAndRenderGeoData);
 
+const cities = [];
+showLocal();
+
 async function getGeoAndRenderGeoData() {
   const cityName = $("#searchInput").val();
+
+  cities.push(cityName);
+
+  addLocal();
 
   const showCards = $("#api-section"); // show cards section
   const showFooter = $(".footer-main"); // show footer section
@@ -88,17 +95,20 @@ function randerHolidayCard(resPublicHolidayApi) {
   }
 }
 
-const settings = {
-  async: true,
-  crossDomain: true,
-  url: "https://public-holiday.p.rapidapi.com/2019/US",
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "2870710a70mshb9dfd7b0cc1c38ap18047cjsn644f8c604a16",
-    "X-RapidAPI-Host": "public-holiday.p.rapidapi.com",
-  },
-};
+function addLocal() {
+  var local = localStorage.setItem("cities", cities);
+  console.log(local);
+}
 
-$.ajax(settings).done(function (response) {
-  console.log(response);
-});
+function showLocal() {
+  var displayLocal = localStorage.getItem('cities');
+  console.log(displayLocal);
+
+  var p = $('<p>');
+  p.addClass("local-p");
+
+  p.text(displayLocal);
+
+  $('#latest-searches').append(p);
+
+}
