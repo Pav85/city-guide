@@ -1,4 +1,4 @@
-# [City-Guide](https://github.com/Pav85/city-guide)
+# City Guide
 
 ## Description
 
@@ -21,7 +21,15 @@ After typing name of the city and clicking search button four cards appear on th
   - Language
   - Local currency
 
-- Second card displays currency converter which allows user to convert his currency into city's local currency
+- Second card displays weather in the searched city
+
+  - City name
+  - Current weather icon
+  - Temperature
+  - Wind speed
+  - Humidity
+
+- Third card displays currency converter which allows user to convert his currency into city's local currency
 
 - Third card displays weather in the searched city
   - City name
@@ -36,6 +44,9 @@ After typing name of the city and clicking search button four cards appear on th
 ## Installation
 
 After opening this URL: https://pav85.github.io/city-guide/ you should see this: ![city-guide](./assets/images/screenshot.png)
+
+After entering the city name and clicking the search button you should see something similar to this:
+![city-guide](./assets/images/screenshot2.png)
 
 ### GitHub Repository URL: https://github.com/Pav85/city-guide
 
