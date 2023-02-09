@@ -5,7 +5,7 @@ showLocal();
 
 async function getGeoAndRenderGeoData() {
   const cityName = $("#searchInput").val();
-
+  $('#searchInput').val("");
   cities.push(cityName);
 
   addLocal();
@@ -99,12 +99,10 @@ function randerHolidayCard(resPublicHolidayApi) {
 
 function addLocal() {
   var local = localStorage.setItem("cities", cities);
-  console.log(local);
 }
 
 function showLocal() {
-  var displayLocal = localStorage.getItem("cities");
-  console.log(displayLocal);
+  var displayLocal = localStorage.getItem('cities');
 
   var p = $("<p>");
   p.addClass("local-p");
