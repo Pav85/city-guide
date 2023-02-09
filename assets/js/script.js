@@ -5,7 +5,7 @@ showLocal();
 
 async function getGeoAndRenderGeoData() {
   const cityName = $("#searchInput").val();
-
+  $('#searchInput').val("");
   cities.push(cityName);
 
   addLocal();
