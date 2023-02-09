@@ -96,6 +96,8 @@ body {
   /* -webkit-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
   /* -moz-box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75); */
   box-shadow: 5px 5px 18px -6px rgba(0, 0, 0, 0.75);
+  max-height: 300px;
+  overflow: auto;
 }
 
 .card-title {
@@ -115,6 +117,12 @@ body {
   font-weight: 500;
   /* font-family: Georgia, "Times New Roman", Times, serif; */
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-family: cursive;
+}
+
+.card li {
+  opacity: 0.9;
+  font-size: 18px;
   font-family: cursive;
 }
 
@@ -140,6 +148,14 @@ body {
 }
 
 /* Currency API ends */
+
+/* Article from Wikipedia start */
+#info p {
+  font-size: 18px;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* Article from Wikipedia ends */
 
 /* Footer section */
 footer {

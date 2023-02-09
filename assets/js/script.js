@@ -87,3 +87,18 @@ function randerHolidayCard(resPublicHolidayApi) {
     holidays.append(liHoliday);
   }
 }
+
+const settings = {
+  async: true,
+  crossDomain: true,
+  url: "https://public-holiday.p.rapidapi.com/2019/US",
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "2870710a70mshb9dfd7b0cc1c38ap18047cjsn644f8c604a16",
+    "X-RapidAPI-Host": "public-holiday.p.rapidapi.com",
+  },
+};
+
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
