@@ -1,6 +1,5 @@
 const publicHolidayApi = {
   getPublicHoliday: async (countryCode) => {
-    console.log(`https://public-holiday.p.rapidapi.com/2023/${countryCode}`);
     const result = await $.ajax({
       async: true,
       crossDomain: true,
