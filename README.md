@@ -1,4 +1,4 @@
-# City-Guide
+# [City-Guide](https://github.com/Pav85/city-guide)
 
 ## Description
 
@@ -39,20 +39,6 @@ After opening this URL: https://pav85.github.io/city-guide/ you should see this:
 
 ### GitHub Repository URL: https://github.com/Pav85/city-guide
 
-## API Reference
-
-##### **Currency Converter:**
-
-Fixer APi: https://apilayer.com/marketplace/fixer-api
-
-##### **Weather:**
-
-5 day weather forecast API: https://openweathermap.org/forecast5#name5
-
-##### **Public Holidays:**
-
-Public Holiday API: https://rapidapi.com/theapiguy/api/public-holiday/
-
 ## Color Reference
 
 | Color         | Hex                                                               |
@@ -62,12 +48,44 @@ Public Holiday API: https://rapidapi.com/theapiguy/api/public-holiday/
 | Example Color | ![#c1d7ae](https://via.placeholder.com/10/c1d7ae?text=+) #c1d7ae  |
 | Example Color | ![#8cc084](https://via.placeholder.com/10/8cc084?text=+) #8cc084  |
 
+## API Reference
+
+##### **Info:**
+
+GeoDB Cities API: https://rapidapi.com/wirefreethought/api/geodb-cities
+
+Rest Countries API: https://rapidapi.com/wirefreethought/api/geodb-cities
+
+##### **Currency Converter:**
+
+Fixer APi: https://apilayer.com/marketplace/fixer-api
+
+##### **Weather:**
+
+Weather API: https://openweathermap.org/api
+
+5 day weather forecast API: https://openweathermap.org/forecast5#name5
+
+##### **Public Holidays:**
+
+Public Holiday API: https://rapidapi.com/theapiguy/api/public-holiday/
+
 ## Authors
 
-- [@OlgaFelczak](https://github.com/OlgaFelczak)
-- [@Pawel](https://github.com/Pav85)
-- [@Alexander](https://github.com/PurAlex)
+## [@OlgaFelczak](https://github.com/OlgaFelczak)
+
+## [@Pawel](https://github.com/Pav85)
+
+## [@Alexander](https://github.com/PurAlex)
 
 ## License
 
 N/A
+
+## Technologies used
+
+[![My Skills](https://skills.thijs.gg/icons?i=html&theme=dark)](https://en.wikipedia.org/wiki/HTML)
+[![My Skills](https://skills.thijs.gg/icons?i=css&theme=dark)](https://en.wikipedia.org/wiki/CSS)
+[![My Skills](https://skills.thijs.gg/icons?i=javascript&theme=dark)](https://en.wikipedia.org/wiki/JavaScript)
+[![My Skills](https://skills.thijs.gg/icons?i=jquery&theme=dark)](https://jquery.com/)
+[![My Skills](https://skills.thijs.gg/icons?i=bootstrap&theme=dark)](https://getbootstrap.com/)

@@ -13,9 +13,11 @@ async function getGeoAndRenderGeoData() {
   const showCards = $("#api-section"); // show cards section
   const showFooter = $(".footer-main"); // show footer section
   const showLargeJumbotron = $(".jumbotron-main"); // show large jumbotron section
+  const showLatestSearches = $("#searches"); // show latest searches section
   showCards.removeClass("hide"); // show cards section
   showFooter.removeClass("footer-main"); // show footer section
   showLargeJumbotron.removeClass("jumbotron-main"); // show large jumbotron section
+  showLatestSearches.removeClass("hide-searches"); // show latest searches section
 
   const resGeoApi = await geoApi.getCity(cityName);
   const resWikiApi = await wikipediaApi.getArticle(cityName);
@@ -23,10 +25,14 @@ async function getGeoAndRenderGeoData() {
     resGeoApi.data[0].countryCode
   );
   const resWeatherApi = await weatherApi.getForecast(cityName);
+  const resPublicHolidayApi = await publicHolidayApi.getPublicHoliday(
+    resGeoApi.data[0].countryCode
+  );
 
   renderCountryCardAndCurrency(resCountryApi);
   renderCountryArticle(resWikiApi);
   renderWeatherCard(cityName, resWeatherApi);
+  randerHolidayCard(resPublicHolidayApi);
 }
 
 function renderCountryCardAndCurrency(resCountryApi) {
@@ -82,6 +88,15 @@ function renderWeatherCard(headerCity, resWeatherApi) {
   );
 }
 
+function randerHolidayCard(resPublicHolidayApi) {
+  const holidays = $("#holidays");
+  for (let i = 0; i < resPublicHolidayApi.length; i++) {
+    const element = resPublicHolidayApi[i];
+    const liHoliday = $("<li>").text(`${element.date} - ${element.name}`);
+    holidays.append(liHoliday);
+  }
+}
+
 function addLocal() {
   var local = localStorage.setItem("cities", cities);
 }
@@ -89,11 +104,10 @@ function addLocal() {
 function showLocal() {
   var displayLocal = localStorage.getItem('cities');
 
-  var p = $('<p>');
+  var p = $("<p>");
   p.addClass("local-p");
 
   p.text(displayLocal);
 
-  $('#latest-searches').append(p);
-
+  $("#latest-searches").append(p);
 }
