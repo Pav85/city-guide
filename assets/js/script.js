@@ -10,14 +10,14 @@ async function getGeoAndRenderGeoData() {
 
   addLocal();
 
-  const showCards = $("#api-section"); // show cards section
-  const showFooter = $(".footer-main"); // show footer section
-  const showLargeJumbotron = $(".jumbotron-main"); // show large jumbotron section
-  const showLatestSearches = $("#searches"); // show latest searches section
-  showCards.removeClass("hide"); // show cards section
-  showFooter.removeClass("footer-main"); // show footer section
-  showLargeJumbotron.removeClass("jumbotron-main"); // show large jumbotron section
-  showLatestSearches.removeClass("hide-searches"); // show latest searches section
+  const showCards = $("#api-section");
+  const showFooter = $(".footer-main");
+  const showLargeJumbotron = $(".jumbotron-main");
+  const showLatestSearches = $("#searches");
+  showCards.removeClass("hide");
+  showFooter.removeClass("footer-main");
+  showLargeJumbotron.removeClass("jumbotron-main");
+  showLatestSearches.removeClass("hide-searches");
 
   const resGeoApi = await geoApi.getCity(cityName);
   const resWikiApi = await wikipediaApi.getArticle(cityName);
@@ -90,11 +90,12 @@ function renderWeatherCard(headerCity, resWeatherApi) {
 
 function randerHolidayCard(resPublicHolidayApi) {
   const holidays = $("#holidays");
+  holidays.empty();
   for (let i = 0; i < resPublicHolidayApi.length; i++) {
     const element = resPublicHolidayApi[i];
     const liHoliday = $("<li>")
-      .text(`${element.date.replace("2023-", "")} - ${element.name}`) // remove year from date
-      .css("text-align", "left"); // align holidays list
+      .text(`${element.date.replace("2023-", "")} - ${element.name}`)
+      .css("text-align", "left");
     holidays.append(liHoliday);
   }
 }
